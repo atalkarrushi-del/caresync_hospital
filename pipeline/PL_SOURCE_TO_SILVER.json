@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select stage from  ctrl.table_config where source_system = '@{pipeline().parameters.source_system}' and is_active = 1",
+							"value": "select table_id from ctrl.table_config where source_system = '@{pipeline().parameters.source_system}' and is_active = 1",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -61,7 +61,7 @@
 							"typeProperties": {
 								"variableName": "stage",
 								"value": {
-									"value": "@item().stage",
+									"value": "@item().table_id",
 									"type": "Expression"
 								}
 							}
