@@ -1,0 +1,15 @@
+{
+	"name": "carepipelineflow",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fe624022-31ba-4207-9592-3a1b0f0a1361",
+		"tenantId": "78e5152f-15dc-41e3-bdc3-c5c6c8324806"
+	}
+}
