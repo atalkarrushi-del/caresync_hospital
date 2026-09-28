@@ -1,0 +1,23 @@
+{
+	"name": "LNKS_AzureSqlDatabase",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "hospitalserver.database.windows.net",
+			"database": "hospitaldata",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "rushiadmin",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LNKS_AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azuresqlserver-password"
+			}
+		}
+	}
+}
