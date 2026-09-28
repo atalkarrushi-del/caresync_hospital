@@ -1,0 +1,10 @@
+{
+	"name": "LNKS_AzureKeyVault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://hospitalkeyvaultsecrets.vault.azure.net/"
+		}
+	}
+}
