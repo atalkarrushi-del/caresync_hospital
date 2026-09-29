@@ -141,7 +141,21 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/atalkarrushi@gmail.com/caresync_hospital_azdatabricks/SOURCE_TO_BRONZE"
+					"notebookPath": "/Users/atalkarrushi@gmail.com/caresync_hospital_azdatabricks/SOURCE_TO_BRONZE",
+					"baseParameters": {
+						"source_system": {
+							"value": "@activity('Read Table Data').output.firstRow.source_system",
+							"type": "Expression"
+						},
+						"table_name": {
+							"value": "@activity('Read Table Data').output.firstRow.bronze_table_name",
+							"type": "Expression"
+						},
+						"landing_timestamp": {
+							"value": "@variables('start_time')",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "LNKS_AzureDatabricks",
@@ -172,6 +186,10 @@
 					"baseParameters": {
 						"table_name": {
 							"value": "@activity('Read Table Data').output.firstRow.silver_table_name",
+							"type": "Expression"
+						},
+						"landing_timestamp": {
+							"value": "@variables('start_time')",
 							"type": "Expression"
 						}
 					}
